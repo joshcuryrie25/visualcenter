@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding: 2rem;
+    }
+    video {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Google Drive Video</h1>
+  <div id="video-container"></div>
+
+  <script>
+    const fileId = "1crvFflZ8fGiKI8WbB3hyJuuxSr7ia3fR";
+    const videoSrc = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+    const video = document.createElement("video");
+    video.controls = true;
+    video.preload = "metadata";
+
+    const source = document.createElement("source");
+    source.src = videoSrc;
+    source.type = "video/mp4";
+
+    video.appendChild(source);
+    document.getElementById("video-container").appendChild(video);
+  </script>
+</body>
+</html>

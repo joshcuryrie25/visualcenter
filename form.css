@@ -1,0 +1,240 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Remove default button styles */
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+    width: 100%;
+    padding: 50px;
+  }
+  
+  /* Style the anchor inside the button */
+  button a {
+    display: block;
+    padding: 12px 30px;
+    color: #e0e1df;
+    text-decoration: none;
+    font-size: 60px;
+    text-align: center;
+    border: #491526 6px solid;
+    border-radius: 20px;
+    font-weight: 700;
+    background-color: #119bd7;
+    transition: all 0.3s ease-in-out;
+    max-width: 100%; /* Ensures it adapts to the container */
+    word-wrap: break-word; /* Allows wrapping if needed */
+    white-space: normal; /* Enables text wrapping */
+  }
+  
+  /* Hover effect */
+  button a:hover {
+    background-color: #e0e1df;
+    font-weight: 800;
+    font-size: 45px;
+    color: #491526;
+    border: #491526 6px solid;
+    padding: 12px 35px;
+    font-size: 65px;
+  }
+  
+  /* Ensure the button doesn't shrink but allows text wrapping */
+  @media (max-width: 600px) {
+    button a {
+      font-size: 40px;
+      padding: 12px 20px;
+      text-align: center;
+      word-wrap: break-word;
+    }
+  
+    button a:hover {
+      font-size: 50px;
+    }
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap');
+  
+  body {
+      font-family: "Archivo", sans-serif;
+      background-image: url(background.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right: 0px;
+  }
+  
+  /* Style the header */
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+  header h1 {
+    text-align: center;
+    font-size: 70px;
+    line-height: 100px;
+    color: #ddd;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    background-color: #641934;
+    padding-top: 40px;
+    margin-top: 0px;
+  }
+
+  #quiz h2 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 100px;
+    color: #68b6e5;
+    font-weight: bolder;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+    background-color: #641934;
+    margin-top: 0px;
+  }
+  
+  
+  header img {
+  padding: 10px;
+  }
+  
+  header {
+    background: linear-gradient(-45deg, #491526, #641934, #119bd7, #68b6e5,  #641934, #491526  );
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+  
+  
+  button {
+      margin-left: auto;
+      background: linear-gradient(-45deg, #491526, #641934, #119bd7, #68b6e5,  #641934, #491526  );
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+  
+  iframe {
+    border: none;
+  }
+  
+  #quiz {
+    background-color: #641934;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+  
+  
+  
+  /* Container for flexboxes */
+  .row {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    
+  }
+  
+  
+  
+  a:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:visited {
+    color: white;
+  }
+  
+  a:active {
+    color: white;
+  }
+  
+  /* Style the footer */
+ 
+  footer {
+    background-color: #641934;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .logo img {
+    width: 120px;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icon img {
+    width: 40px;
+  }
+  
+  /* Responsive Design */
+  
+  @media screen and (max-width: 1165px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .social-media {
+      justify-content: center;
+    }
+  }
+  
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
